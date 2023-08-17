@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Julia Sets</title>
+
+		<style>
+			body {
+				background: #AAA;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="600" height="600" style="background-color: black;"></canvas>
+
+		<input type="number" id="num" min="1" max="10000" value="500"> 1-10000 Iterations 
+
+		<input type="number" id="real" min="-2" max = "2" value="-0.307"> + <input type="number" id="complex" min="-2" max="2" value="-0.733"> i
+
+		<button id="button" onclick="scale = 1; translatedX = 0; translatedY = 0; mouseX = 0; mouseY = 0; juliaSetDraw(parseFloat(real.value), parseFloat(complex.value), parseInt(num.value));">Plot</button>
+
+		Use The Mouse To Produce Julia Sets? (Lose zoom functionality if enabled) <input type="checkbox" id="click"> <br>
+
+		<button onclick="help();"> Help </button>
+
+		<script>
+			function help() {
+				alert("Click to zoom in if the checkmark is not checked. More iterations means more detail, but also more time to load the image.");
+			}
+		</script>
+
+
+		<a href="../Math Website.html">Back To My Site</a>
+
+		<script src="Julia_Sets.js"></script>
+	</body>
+</html>
